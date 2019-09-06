@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleClick() {
+        btnSimpleNotification.setOnClickListener {
+            notificationServiceManager.buildSimpleNotification(this, notificationManager)
+        }
         btnMessageNotification.setOnClickListener {
             notificationServiceManager.buildBigPictureNotification(this, notificationManager)
         }
